@@ -6,7 +6,7 @@ import Navbar from './components/Navbar'
 import Home from './Pages/home/Home'
 import Create from './Pages/create/Create'
 import Search from './Pages/search/Search'
-import Recipe from './Pages/recipe/Recipe'
+import TravelPlans from './Pages/travelPlan/TravelPlan'
 import ThemeSelector from './components/ThemeSelector'
 
 // styles
@@ -30,8 +30,8 @@ function App() {
           <Route path="/search">
             <Search />
           </Route>
-          <Route path="/recipes/:id">
-            <Recipe />
+          <Route path="/travelPlans/:id">
+            <TravelPlans />
           </Route>
         </Switch>
       </BrowserRouter>

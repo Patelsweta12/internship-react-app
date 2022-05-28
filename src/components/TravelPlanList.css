@@ -1,11 +1,11 @@
-.recipe-list {
+.travelPlan-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 40px;
   max-width: 1200px;
   margin: 40px auto;
 }
-.recipe-list .card {
+.travelPlan-list .card {
   background: #fff;
   color: #333;
   padding: 20px;
@@ -14,24 +14,33 @@
   transition: all 0.3s ease;
   position: relative;
 }
-.recipe-list .card:hover {
+.travelPlan-list .card:hover {
   transform: rotate(3deg);
 }
-.recipe-list .card h3 {
+.travelPlan-list .card h3 {
   color: #555;
   margin-bottom: 6px;
 }
-.recipe-list .card p {
+.travelPlan-list .card p {
   color: #999;
   font-size: 0.9em;
 }
-.recipe-list .card div {
+.travelPlan-list .card ul {
+  color: #999;
+  font-size: 0.9em;
+}
+.travelPlan-list .card h4 {
+  color: #999;
+  font-size: 0.9em;
+  margin-bottom: 0;
+}
+.travelPlan-list .card div {
   color: #555;
   font-size: 0.7em;
   margin: 20px 0;
   line-height: 1.5em;
 }
-.recipe-list .card a {
+.travelPlan-list .card a {
   color: #555;
   text-decoration: none;
   display: block;
@@ -46,11 +55,13 @@
 }
 
 /* dark mode */
-.recipe-list .card.dark {
+.travelPlan-list .card.dark {
   background: #555;
 }
-.recipe-list .card.dark p,
-.recipe-list .card.dark h3,
-.recipe-list .card.dark div {
+.travelPlan-list .card.dark p,
+.travelPlan-list .card.dark h3,
+.travelPlan-list .card.dark h4,
+.travelPlan-list .card.dark ul,
+.travelPlan-list .card.dark div {
   color: #e4e4e4;
 }

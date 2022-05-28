@@ -1,9 +1,9 @@
 {
-  "recipes": [
+  "travelPlans": [
     {
       "id": "1",
       "title": "Lonavala",
-      "ingredients": [
+      "travelStops": [
         "1 Carrot",
         "1 Leek",
         "200g Tofu",
@@ -15,7 +15,7 @@
     {
       "id": "2",
       "title": "Akshardham Mandir Delhi",
-      "ingredients": [
+      "travelStops": [
         "1 Base",
         "Tomata pasata",
         "1 Green pepper",
@@ -27,7 +27,7 @@
     {
       "id": "3",
       "title": "Hawa Mahal(Jaipur)",
-      "ingredients": [
+      "travelStops": [
         "1 Onion",
         "1 Block of Feta",
         "Olives",
@@ -39,7 +39,7 @@
     },
     {
       "title": "Burj Khalifa",
-      "ingredients": [
+      "travelStops": [
         "Ghau no lot, water, chulo"
       ],
       "method": "Burj Khalifa already holds the title of the world's tallest structure, and now it can add another accolade to its list, after being named among the world's most beautiful buildings.",
@@ -48,14 +48,14 @@
     },
     {
       "title": "Tithal beach",
-      "ingredients": [],
+      "travelStops": [],
       "method": "great beach its located 5 km around valsad city cool huge beach great place and its love to be feel sunset here",
       "travelTime": "5km from city",
       "id": "eivdKf5"
     },
     {
       "title": "Ujjain mahakal",
-      "ingredients": [],
+      "travelStops": [],
       "method": "Mahakaleshwar Jyotirlinga is a Hindu temple dedicated to Shiva and is one of the twelve Jyotirlingams, shrines which are said to be the most sacred abodes of Shiva. It is located in the ancient city of Ujjain in the state of Madhya Pradesh, India. The temple is situated on the side of the holy river Shipra.",
       "travelTime": "7 hours 13  minutes",
       "id": "2FLWthj"

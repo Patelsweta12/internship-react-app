@@ -1,0 +1,33 @@
+.travelPlan {
+  max-width: 1200px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 40px;
+  box-sizing: border-box;
+  color:#333;
+}
+.travelPlan ul {
+  padding: 0;
+  justify-content: left;
+  margin-top: 0;
+  padding-left: 50px;
+}
+.travelPlan li {
+  margin-right: 10px;
+  justify-content: left;
+}
+
+.method {
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+.duration{
+  text-align: center;
+}
+
+/* dark mode */
+.travelPlan.dark {
+  background: #555;
+  color: #e4e4e4;
+}
