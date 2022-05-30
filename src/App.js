@@ -16,7 +16,9 @@ function App() {
   const { mode } = useTheme()
 
   return (
-    <div className={`App ${mode}`}>
+
+<div className={`App ${mode}`}>
+<div style={{ backgroundImage: "url(https://wallpaperaccess.com/full/2592094.jpg)" }}>
       <BrowserRouter>
         <Navbar />
         <ThemeSelector />
@@ -36,7 +38,9 @@ function App() {
         </Switch>
       </BrowserRouter>
     </div>
+</div>
   );
+
 }
 
 export default App
