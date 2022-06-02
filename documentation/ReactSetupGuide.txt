@@ -1,0 +1,15 @@
+1.	Install npm latest version 
+2.	Install visual code latest version	
+         a.	Plugins  - “ES7 React/Redux/GraphQL/React-Native snippets”, “live server” 
+
+Useful commands: 
+•	Download and install node libraries: 
+npm install
+•	Create and setup react project:
+npm create-react -app internship-react-app
+•	Download and setup json-server: 
+npm install -g json-server
+Following commands are necessary to start the react application: 
+•	Start json database server: npx json-server --watch ./data/db.json
+•	Start react server: npm run start
+

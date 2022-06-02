@@ -4,10 +4,10 @@
       "id": "1",
       "title": "Lonavala",
       "travelStops": [
-        "1 Carrot",
-        "1 Leek",
-        "200g Tofu",
-        "300ml Veg stock"
+        "Bhushi Dam",
+        "Lohagad Fort",
+        "Kune Falls",
+        "Lion Point"
       ],
       "method": "Conventionally the beauty of Lonavala is hard to be described in words. Be it dense flora and fauna, variety of entertainment spots or hot piping delicacies; it lures the attention of many tourists worldwide. It just 110 km away from Mumbai, Lonavala is one of the fascinating hills Station. This spot looks more alive and charming during monsoons. Mostly commoners believe that meaning of name “Lonavala” is resting pieces of stones. There are various secret home-guarded delicacies and the place is famous for many things. The most renowned and affectionately loved is the sweet slab known as “Chikki”. The bites are crunchy, sweet and various organic flavors are a replenishing treat to our taste buds.",
       "travelTime": "8-10 hours"
@@ -16,10 +16,10 @@
       "id": "2",
       "title": "Akshardham Mandir Delhi",
       "travelStops": [
-        "1 Base",
-        "Tomata pasata",
-        "1 Green pepper",
-        "100g Mushrooms"
+        "Agra",
+        "Qutub Minar",
+        "Lotus Temple",
+        "India Gate"
       ],
       "method": "Akshardham Temple is a famous Hindu temple and a spiritual-cultural complex. Also known as Swaminarayan Akshardham, it is dedicated to Lord Swaminarayan. Akshardham has made its way to the Guinness Book of World Records as the World's Largest Comprehensive Hindu Temple.",
       "travelTime": "8 km from city center"
@@ -28,11 +28,11 @@
       "id": "3",
       "title": "Hawa Mahal(Jaipur)",
       "travelStops": [
-        "1 Onion",
-        "1 Block of Feta",
-        "Olives",
-        "Tomatoes",
-        "Olive Oil"
+        "Pink City",
+        "Jantar Mantar",
+        "City Places",
+        "Jal Mahal",
+        "Amber Fort"
       ],
       "method": "Hawa Mahal was built in Rajputana architectural style. The palace is constructed of beautiful red and pink sandstone and it looks like a five storeyed Pyramid. The palace stands on a podium which is fifty feet high from base. Its unique five-storey exterior has 953 small windows called jharokhas decorated with intricate latticework. The original intention of the lattice was to allow royal ladies to observe everyday life in the street below without being seen. Through these windows, cool air enters in the palace and makes the inner environment cool and pleasant.",
       "travelTime": "6km from railway station"
@@ -40,7 +40,9 @@
     {
       "title": "Burj Khalifa",
       "travelStops": [
-        "Ghau no lot, water, chulo"
+        "Palm Island",
+        "Dubai Mall",
+        "Desert Safari"
       ],
       "method": "Burj Khalifa already holds the title of the world's tallest structure, and now it can add another accolade to its list, after being named among the world's most beautiful buildings.",
       "travelTime": "14.5km from airport",
