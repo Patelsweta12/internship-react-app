@@ -1,11 +1,13 @@
 import { useState, useRef, useEffect } from 'react'
 import { useFetch } from '../../hooks/useFetch'
 import { useHistory } from 'react-router-dom'
+import { useTheme } from '../../hooks/useTheme'
 
 // styles
 import './Create.css'
 
 export default function Create() {  
+  const { mode } = useTheme()
   const [title, setTitle] = useState('')
   const [method, setMethod] = useState('')
   const [travelTime, settravelTime] = useState('')
@@ -40,7 +42,7 @@ export default function Create() {
   }, [data, history])
 
   return (
-    <div className="create">
+    <div className={`Create ${mode}`}>
       <h2 className="page-title">Add a New Trip Plan</h2>
       <form onSubmit={handleSubmit}>
 

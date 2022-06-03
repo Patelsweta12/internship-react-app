@@ -1,6 +1,8 @@
 import { useFetch } from '../../hooks/useFetch'
 import { useLocation } from 'react-router-dom'
 import TravelPlanList from '../../components/TravelPlanList'
+import Searchbar from '../../components/Searchbar'
+import GlobalStyles from '../../Globalstyles'
 
 // styles
 import './Search.css'
@@ -15,10 +17,11 @@ export default function Search() {
 
   return (
     <div>
-      <h2 className="page-title">Travel Plans including "{query}"</h2>
-      {error && <p className="error">{error}</p>}
-      {isPending && <p className="loading">Loading...</p>}
-      {data && <TravelPlanList travelPlans={data} />}
-    </div>
+        <Searchbar />
+        <h2 className="page-title">Travel Plans including "{query}"</h2>
+        {error && <p className="error">{error}</p>}
+        {isPending && <p className="loading">Loading...</p>}
+        {data && <TravelPlanList travelPlans={data} />}
+      </div>
   )
 }
