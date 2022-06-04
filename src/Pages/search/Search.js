@@ -2,12 +2,14 @@ import { useFetch } from '../../hooks/useFetch'
 import { useLocation } from 'react-router-dom'
 import TravelPlanList from '../../components/TravelPlanList'
 import Searchbar from '../../components/Searchbar'
-import GlobalStyles from '../../Globalstyles'
+import { useTheme } from '../../hooks/useTheme'
+import React from 'react'
 
 // styles
 import './Search.css'
 
 export default function Search() {
+  const { mode } = useTheme()
   const queryString = useLocation().search
   const queryParams = new URLSearchParams(queryString)
   const query = queryParams.get('q')
@@ -16,9 +18,9 @@ export default function Search() {
   const { error, isPending, data } = useFetch(url)
 
   return (
-    <div>
+    <div className={`Search-theme ${mode}`}>
         <Searchbar />
-        <h2 className="page-title">Travel Plans including "{query}"</h2>
+        <h4 className="page-title">Following are search results for Travel Plans that includes "{query}":</h4>
         {error && <p className="error">{error}</p>}
         {isPending && <p className="loading">Loading...</p>}
         {data && <TravelPlanList travelPlans={data} />}

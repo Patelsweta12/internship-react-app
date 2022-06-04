@@ -1,8 +1,7 @@
-.Search-theme {
-    color: #555;
-    max-width: 90%;
+.useFetch {
+    max-width: 480px;
     margin: 60px auto;
-    background: #e3e3e3;
+    background: #C0C0C0;
     color:#121212;
     padding: 20px;
     border-radius: 4px;
@@ -10,9 +9,9 @@
     transition: all 0.3s ease;
     position: relative;
 }
-
+ 
 /* dark mode */
-.Search-theme.dark {
-    background: #121212;
-    color: #d4d4d4;
-  }
+.Create.dark {
+    background: #C0C0C0;
+    color: #121212;
+}

@@ -1,5 +1,6 @@
 import { useFetch } from '../../hooks/useFetch'
 import TravelPlanList from '../../components/TravelPlanList'
+import React from 'react'
 
 // styles
 import './Home.css'

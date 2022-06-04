@@ -1,7 +1,10 @@
-import { useState, useRef, useEffect } from 'react'
-import { useFetch } from '../../hooks/useFetch'
+import { useEffect, useRef, useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import { useFetch } from '../../hooks/useFetch'
 import { useTheme } from '../../hooks/useTheme'
+import Compress from "react-image-file-resizer"
+import React from 'react'
+
 
 // styles
 import './Create.css'
@@ -9,31 +12,59 @@ import './Create.css'
 export default function Create() {  
   const { mode } = useTheme()
   const [title, setTitle] = useState('')
-  const [method, setMethod] = useState('')
+  const [travelDescription, setTravelDescription] = useState('')
   const [travelTime, settravelTime] = useState('')
-  const [newIngredient, setNewIngredient] = useState('')
-  const [ingredients, setIngredients] = useState([])
-  const ingredientInput = useRef(null)
+  const [newTravelStops, setNewTravelStops] = useState('')
+  const [travelStops, setTravelStops] = useState([])
+  const [travelImage, setTravelImage] = useState('')
+  const [newTravelImage, setNewTravelImage] = useState('')
+  const travelStopInput = useRef(null)
 
   const { postData, data } = useFetch('http://localhost:3000/travelPlans', 'POST')
   const history = useHistory()
   
   const handleSubmit = (e) => {
     e.preventDefault()
-    postData({ title, ingredients, method, travelTime: travelTime + ' minutes' })
+    postData({ title, travelStops, travelDescription, travelImage: travelImage, travelTime: travelTime + ' Days' })
   }
 
   const handleAdd = (e) => {
     e.preventDefault()
-    const ing = newIngredient.trim()
+    const ing = newTravelStops.trim()
 
-    if (ing && !ingredients.includes(ing)) {
-      setIngredients(prevIngredients => [...prevIngredients, newIngredient])
+    if (ing && !travelStops.includes(ing)) {
+      setTravelStops(prevTravelStops => [...prevTravelStops, newTravelStops])
     }
-    setNewIngredient('')
-    ingredientInput.current.focus()
+    setNewTravelStops('')
+    travelStopInput.current.focus()
   }
 
+  const uploadImage = async (e) => {
+    const file = e.target.files[0]
+    const smallImage = await resizeFile(file)
+    setTravelImage(smallImage)
+    console.log(smallImage)
+  }
+
+const resizeFile = (file) =>{
+  console.log(file)
+  return new Promise((resolve) => {
+    Compress.imageFileResizer(
+      file,
+      300,
+      400,
+      "JPEG",
+      70,
+      0,
+      (uri) => {
+        resolve(uri);
+      },
+      "base64"
+    )
+  }
+  )
+}
+  
   // redirect the user when we get data response
   useEffect(() => {
     if (data) {
@@ -58,23 +89,23 @@ export default function Create() {
 
         <label>
           <span>Places to visit:</span>
-          <div className="ingredients">
+          <div className="travelStops">
             <input 
               type="text" 
-              onChange={(e) => setNewIngredient(e.target.value)}
-              value={newIngredient}
-              ref={ingredientInput}
+              onChange={(e) => setNewTravelStops(e.target.value)}
+              value={newTravelStops}
+              ref={travelStopInput}
             />
             <button onClick={handleAdd} className="btn">add</button>
           </div>
         </label>
-        <p>Planned Location: {ingredients.map(i => <em key={i}>{i}, </em>)}</p>
+        <p>Planned Location: {travelStops.map(i => <em key={i}>{i}, </em>)}</p>
 
         <label>
-          <span>Transportation Method:</span>
+          <span>Travel Description:</span>
           <textarea 
-            onChange={(e) => setMethod(e.target.value)}
-            value={method}
+            onChange={(e) => setTravelDescription(e.target.value)}
+            value={travelDescription}
             required
           />
         </label>
@@ -87,6 +118,21 @@ export default function Create() {
             value={travelTime}
             required 
           />
+        </label>
+
+        <label>
+          <span>Picture to upload:</span>
+          <div className="travelStops">
+            <input 
+              type="file" 
+              onChange={(e) => {
+                uploadImage(e)
+                setNewTravelImage(e.target.value)
+                }
+              }
+              value = {newTravelImage}
+            />
+          </div>
         </label>
 
         <button className="btn">submit</button>

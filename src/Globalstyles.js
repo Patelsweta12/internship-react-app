@@ -27,7 +27,7 @@ body{
     line-height: 1.6;
     font-size: 1.6rem;
     background: #F9F9F9;
-    color: #333;
+    color:#121212;
 
 }
 `;
@@ -91,8 +91,8 @@ transition: all .5s ease;
 
 export const OutlineButton = styled.button`
 border-radius: ${({bigRadius})=> bigRadius? '40px' : '30px'};
-border: 2px solid #333;
-color: #333;
+border: 2px solid #fff;
+color:#121212;
 outline: none;
 padding: ${({big}) => big? '15px 60px' : '13px 55px'};
 font-size: ${({fontBig}) => fontBig? '22px':'18px'};
@@ -101,7 +101,7 @@ background-color: #fefefe;
 
 
 &:hover {
-    background-color: #333;
+    background-color:#121212;
     color: #fff;
     border: none;
     transform: translateY(-.5rem) scale(1.02);

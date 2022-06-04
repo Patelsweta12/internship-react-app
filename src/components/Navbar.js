@@ -1,46 +1,25 @@
-import { Link } from 'react-router-dom'
 import { useTheme } from '../hooks/useTheme'
-import { IconContext } from "react-icons";
 import { BiMenu, BiX } from "react-icons/bi";
-import {Button} from '../Globalstyles';
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 // styles
 import './Navbar.css'
 
 import 
 {
-    Nav,
     NavbarContainer,
     NavLogo,
     NavIcon,
     MenuIcon,
     Menu,
-    MenuItem,
-    MenuLink,
-    MenuItemBtn,
-    MenuLinkBtn,
+    MenuLink
 } from './Navbar.styles';
 
 export default function Navbar() {
   const { color } = useTheme()
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
   const handleClick = () => setClick(!click);
   const closeMenu = () => setClick(false);
-
-  const showButton = () =>{
-      if(window.innerWidth<= 1000){
-          setButton(false);
-      }else{
-          setButton(true);
-      }
-  }
-
-  useEffect(() => {
-      showButton();
-  }, []);
-  window.addEventListener('resize', showButton);
 
   return (
     <div className="navbar" style={{ background: color }}>

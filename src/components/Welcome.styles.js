@@ -13,7 +13,7 @@ export const WelcomeContent = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-background: #fff;
+background: #D9D9D9;
 
 @media only screen and (max-width:1000px) {
     flex-direction: column;

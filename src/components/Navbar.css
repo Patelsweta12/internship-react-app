@@ -23,6 +23,6 @@
   border-radius: 4px;
 }
 .navbar a:last-child:hover {
-  background: #fff;
-  color: #333;
+  background: #C0C0C0;
+  color:#121212;
 }

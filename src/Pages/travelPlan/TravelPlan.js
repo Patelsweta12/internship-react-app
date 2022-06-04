@@ -1,19 +1,10 @@
 import { useParams } from 'react-router-dom'
 import { useFetch } from '../../hooks/useFetch'
 import { useTheme } from '../../hooks/useTheme'
+import React from 'react'
 
 // styles
 import './TravelPlan.css'
-
-function travelStopList(stops) {
-  const multipleStops = stops.list;
-  const listItems = multipleStops.map((stop) =>
-    <li>{stop}</li>
-  );
-  return (
-    <ul>{listItems}</ul>
-  );
-}
 
 export default function TravelPlans() {
   const { id } = useParams()
@@ -26,8 +17,9 @@ export default function TravelPlans() {
       {error && <p className="error">{error}</p>}
       {isPending && <p className="loading">Loading...</p>}
       {travelPlans && (
-        <>
+        <div>
           <h2 className="page-title">{travelPlans.title}</h2>
+          <center><div>{  <div>{<img src={travelPlans.travelImage} alt={travelPlans.title}/>}</div>}</div></center>
           <h4>Travel Duration:</h4>
           <p>{travelPlans.travelTime}</p>
           <h4>Planned stops:</h4>
@@ -35,8 +27,8 @@ export default function TravelPlans() {
             {travelPlans.travelStops.map((stop) => <li>{stop}</li>)}
           </ul>
           <h4>Travel Description:</h4>
-          <p className="method">{travelPlans.method}</p>
-        </>
+          <p className="travelDescription">{travelPlans.travelDescription}</p>
+        </div>
       )}
     </div>
   )

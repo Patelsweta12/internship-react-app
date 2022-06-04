@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react"
+import { useTheme } from './useTheme'
+import React from 'react'
+
+// styles
+import './useFetch.css'
 
 export const useFetch = (url, method = "GET") => {
+  const { mode } = useTheme()
   const [data, setData] = useState(null)
   const [isPending, setIsPending] = useState(false)
   const [error, setError] = useState(null)
@@ -37,7 +43,9 @@ export const useFetch = (url, method = "GET") => {
           console.log("the fetch was aborted")
         } else {
           setIsPending(false)
-          setError('Could not fetch the data')
+          setError(  
+            <div className={`useFetch ${mode}`}>No Travel Plan to load...</div>
+        )
         }
       }
     }
