@@ -9,7 +9,7 @@ npm install
 npm create-react -app internship-react-app
 •	Download and setup json-server: 
 npm install -g json-server
-Following commands are necessary to start the react application: 
-•	Start json database server: npx json-server --watch ./data/db.json
+Following commands are necessary to start the react application: npx json-server --watch ./data/db.json
+•	Start json database server: 
 •	Start react server: npm run start
 
