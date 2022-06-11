@@ -1,6 +1,14 @@
 .useFetch {
-    max-width: 480px;
-    margin: 60px auto;
+    max-width: 95%;
+    margin: 40px auto;
+    margin-bottom: 40px;
+    background: #C0C0C0;
+    padding: 40px;
+    box-sizing: border-box;
+    color:#121212;
+}
+
+.useFetch .card {
     background: #C0C0C0;
     color:#121212;
     padding: 20px;
@@ -8,7 +16,7 @@
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     position: relative;
-}
+  }
  
 /* dark mode */
 .Create.dark {

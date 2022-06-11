@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import React from 'react'
+import { useTheme } from '../../hooks/useTheme'
 
 // styles
 import './Searchbar.css'
 
 export default function Searchbar() {
+  const { mode } = useTheme()
   const [term, setTerm] = useState('')
   const history = useHistory()
 
@@ -16,16 +18,18 @@ export default function Searchbar() {
   }
 
   return (
-    <div className="searchbar">
+    <div className={`searchbar ${mode}`}>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="search">Search:</label>
         <input 
           id="search" 
           type="text" 
+          placeholder="Search Trips.."
           onChange={(e) => setTerm(e.target.value)} 
           required 
         />
+        <center><button className="button" type="submit">Search</button></center>
       </form>
+     
     </div>
   )
 }

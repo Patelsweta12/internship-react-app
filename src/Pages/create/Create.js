@@ -5,7 +5,6 @@ import { useTheme } from '../../hooks/useTheme'
 import Compress from "react-image-file-resizer"
 import React from 'react'
 
-
 // styles
 import './Create.css'
 

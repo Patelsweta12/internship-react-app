@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import {BiPaperPlane } from 'react-icons/bi';
-import {Container} from '../Globalstyles';
+import {Container} from '../../Globalstyles';
 
 
 export const Nav = styled.nav` 
-font-size: 18px;
+font-size: 12px;
 position: sticky;
 top: 0;
 z-index: 999;
@@ -27,13 +27,13 @@ ${Container};
 `;
 
 export const NavLogo = styled(Link)`
-color: #fff;
+color: #FDD128;
 cursor: pointer;
 display: flex;
 align-items: center;
 text-decoration: none;
-font-size: 2.5rem;
-font-weight: 800;
+font-size: 1.8rem;
+font-weight: 600;
 transition: all .5s ease;
 &:hover{
     transform: scale(1.08);
@@ -45,7 +45,7 @@ margin-right: .8rem;
 transition: all .5s ease;
 
 &:hover {
-    transform: scale(2);
+    transform: scale(3);
 }
 `;
 
@@ -72,7 +72,7 @@ text-align: center;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     position: absolute;
     top: 80px;
     left: ${({click}) => click ? '0' : '-100%'};
@@ -83,7 +83,7 @@ text-align: center;
 
 export const MenuItem = styled.li`
 list-style: none;
-height: 80px;
+height: 70px;
 
 
 @media only screen and (max-width:1000px){
@@ -141,7 +141,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 padding: 8px 16px;
-height: 100%;
+height: 90%;
 width: 100%;
 border: none;
 outline: none;

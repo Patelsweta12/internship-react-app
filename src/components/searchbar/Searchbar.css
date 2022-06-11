@@ -1,0 +1,36 @@
+.searchbar {
+  color: #555;
+  background: #C0C0C0;
+  color:#121212;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.searchbar form {
+  display: block;
+  align-items: center;
+}
+
+button {
+  background: #C0C0C0;
+  color:#121212;
+  display: block;
+  width: 30%;
+  font-size: 1em;
+  margin-top: 20px;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* dark mode */
+.searchbar.dark {
+  background: #121212;
+  color: #e4e4e4;
+}
+.button.dark {
+  background: #121212;
+  color: #e4e4e4;
+}

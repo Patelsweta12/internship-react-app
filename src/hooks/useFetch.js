@@ -44,7 +44,9 @@ export const useFetch = (url, method = "GET") => {
         } else {
           setIsPending(false)
           setError(  
-            <div className={`useFetch ${mode}`}>No Travel Plan to load...</div>
+            <div className={`useFetch ${mode}`}>
+              <div ClassName="form">No Travel Plan to load...</div>
+            </div>
         )
         }
       }

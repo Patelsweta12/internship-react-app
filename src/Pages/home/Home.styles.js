@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import PizzaBg from '../../images/hero-bg.png';
+
 
 export const WelcomeContainer = styled.section`
 display: flex;

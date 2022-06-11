@@ -1,4 +1,4 @@
-.Home-theme {
+.Works-theme {
     color: #555;
     max-width: 90%;
     margin: 60px auto;
@@ -12,7 +12,7 @@
 }
 
 /* dark mode */
-.Home-theme.dark {
+.Works-theme.dark {
     background: #121212;
     color: #d4d4d4;
   }

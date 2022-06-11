@@ -1,40 +1,38 @@
-import { useParams } from 'react-router-dom'
-import { useFetch } from '../../hooks/useFetch'
+import { Link } from 'react-router-dom'
 import { useTheme } from '../../hooks/useTheme'
 import React from 'react'
 
 // styles
-import './TravelPlan.css'
+import './TravelPlanListMaster.css'
 
-export default function TravelPlans() {
-  const { id } = useParams()
-  const url = 'http://localhost:3000/travelPlans/' + id
-  const { error, isPending, data: travelPlans } = useFetch(url)
+export default function TravelPlanListMaster({ travelPlans }) {
   const { mode } = useTheme()
 
+ 
+  if (travelPlans.length === 0) {
+    return  (
+        <div className="card-center">No Travel Plan to load...</div>
+    )
+  }
 
   return (
-    <div className={`travelPlan ${mode}`}>
-      {error && <p className="error">{error}</p>}
-      {isPending && <p className="loading">Loading...</p>}
-      {travelPlans && (
-        <div>
-          <h2 className="page-title">{travelPlans.title}</h2>
-          <center><div><div>
-            {travelPlans.travelImage.length === 0
-            ? <div>{<img src={NO_IMAGE} alt={travelPlans.title}/>}</div>
-            : <div>{<img src={travelPlans.travelImage} alt={travelPlans.title}/>}</div>
-            }</div></div></center>
-          <h4>Travel Duration:</h4>
-          <p>{travelPlans.travelTime}</p>
+    <div className={`travelPlan-list`}>
+      {travelPlans.map(travelPlan => (
+        <div key={travelPlan.id} className={`card ${mode}`}>
+          <h3>{travelPlan.title}</h3>
+          {travelPlan.travelImage.length === 0
+            ? <div>{<img src={NO_IMAGE} alt={travelPlan.title}/>}</div>
+            : <div>{<img src={travelPlan.travelImage} alt={travelPlan.title}/>}</div>
+          }
           <h4>Planned stops:</h4>
-          <ul className="stopList">
-            {travelPlans.travelStops.map((stop) => <li>{stop}</li>)}
+          <ul>
+            {travelPlan.travelStops.map((stop) => <li>{stop}</li>)}
           </ul>
-          <h4>Travel Description:</h4>
-          <p className="travelDescription">{travelPlans.travelDescription}</p>
+          <h4>Duration:</h4>
+          <p>{travelPlan.travelTime}</p>
+          <Link to={`/travelPlans/${travelPlan.id}`}>Visit This</Link>
         </div>
-      )}
+      ))}
     </div>
   )
 }

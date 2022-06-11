@@ -1,4 +1,4 @@
-import { useTheme } from '../hooks/useTheme'
+import { useTheme } from '../../hooks/useTheme'
 import { BiMenu, BiX } from "react-icons/bi";
 import React, {useState} from 'react';
 
@@ -9,7 +9,6 @@ import
 {
     NavbarContainer,
     NavLogo,
-    NavIcon,
     MenuIcon,
     Menu,
     MenuLink
@@ -26,7 +25,7 @@ export default function Navbar() {
       <nav>
         <NavbarContainer>
           <NavLogo to="/">
-            <NavIcon/>
+            <img className="icon" src="https://cdn-icons-png.flaticon.com/512/854/854894.png" alt="titleLogo"/>
               Trip Planner
             </NavLogo>
             <MenuIcon onClick={handleClick}>
@@ -35,6 +34,7 @@ export default function Navbar() {
 
             <Menu onClick={handleClick} click={click}>
               <MenuLink onClick={closeMenu} to="/">Home</MenuLink>
+              <MenuLink onClick={closeMenu} to="/allTrips">All Trips</MenuLink>
               <MenuLink onClick={closeMenu} to="/search">Search Trip</MenuLink>
               <MenuLink onClick={closeMenu} to="/create">Create Trip</MenuLink>
             </Menu>
