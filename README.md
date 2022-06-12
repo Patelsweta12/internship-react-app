@@ -7,7 +7,7 @@
     -  ES7 React/Redux/GraphQL/React-Native snippets
     -  live server         
  3. Download an install necessary libraries unsing terminal of Visual Code:
-    =  npm install 
+    - npm install react-scripts --save
       
  4. Following commands are necessary to start the react application under Visual Studio Code:
     - Start json database server using {  npx json-server --watch ./data/db.json } 
