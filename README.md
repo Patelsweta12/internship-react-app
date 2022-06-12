@@ -1,7 +1,7 @@
 # Travel-Planner
  Following steps can be taken to setup and get Travel-Planner React based application up and running: 
  
- 1. Install npm ( latest version ) 
+ 1. Install npm ( 16.15.1 LTS version ) 
  2. Install Visual Code Latest Version
  3. Install Following Visual Studio Plugins:
     -  ES7 React/Redux/GraphQL/React-Native snippets
