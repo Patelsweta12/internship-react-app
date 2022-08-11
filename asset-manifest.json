@@ -1,14 +1,14 @@
 {
-  "main.css": "/static/css/main.0f4f0f71.chunk.css",
-  "main.js": "/static/js/main.82398c46.chunk.js",
-  "main.js.map": "/static/js/main.82398c46.chunk.js.map",
-  "static/js/1.5dba5810.chunk.js": "/static/js/1.5dba5810.chunk.js",
-  "static/js/1.5dba5810.chunk.js.map": "/static/js/1.5dba5810.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/media/mode-icon.svg": "/static/media/mode-icon.22e350b5.svg",
-  "static/css/main.0f4f0f71.chunk.css.map": "/static/css/main.0f4f0f71.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.33b97257f271d48b1561cde81a46ac82.js": "/precache-manifest.33b97257f271d48b1561cde81a46ac82.js",
-  "service-worker.js": "/service-worker.js"
+  "main.css": "/internship-react-app/static/css/main.0f4f0f71.chunk.css",
+  "main.js": "/internship-react-app/static/js/main.82398c46.chunk.js",
+  "main.js.map": "/internship-react-app/static/js/main.82398c46.chunk.js.map",
+  "static/js/1.4fa56182.chunk.js": "/internship-react-app/static/js/1.4fa56182.chunk.js",
+  "static/js/1.4fa56182.chunk.js.map": "/internship-react-app/static/js/1.4fa56182.chunk.js.map",
+  "runtime~main.js": "/internship-react-app/static/js/runtime~main.9d4c4b3d.js",
+  "runtime~main.js.map": "/internship-react-app/static/js/runtime~main.9d4c4b3d.js.map",
+  "static/media/mode-icon.svg": "/internship-react-app/static/media/mode-icon.22e350b5.svg",
+  "static/css/main.0f4f0f71.chunk.css.map": "/internship-react-app/static/css/main.0f4f0f71.chunk.css.map",
+  "index.html": "/internship-react-app/index.html",
+  "precache-manifest.e03856d2d7c0dcb7d4083c77a70f9c4c.js": "/internship-react-app/precache-manifest.e03856d2d7c0dcb7d4083c77a70f9c4c.js",
+  "service-worker.js": "/internship-react-app/service-worker.js"
 }
